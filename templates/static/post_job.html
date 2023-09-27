@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/app.css')}}">
+    <title>Post a Job</title>
+</head>
+<body>
+    <h1>Post a Job</h1>
+    <form method="POST" action="/post_job">
+        <label for="title">Title:</label>
+        <input type="text" name="title" required><br>
+        <label for="description">Description:</label>
+        <textarea name="description" rows="4" cols="50" required></textarea><br>
+        <input type="submit" value="Post Job">
+    </form>
+    <a href="/">Back to Job Postings</a>
+</body>
+</html>
